@@ -1,0 +1,3 @@
+#!/bin/bash
+
+g++ -std=c++17 -g -w ./src/*.cpp ./src/ASCII_ENGINE/*.cpp -o guitarhero && ./guitarhero
