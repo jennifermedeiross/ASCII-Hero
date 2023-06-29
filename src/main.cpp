@@ -6,7 +6,6 @@
 
 int main() {
     PageHome pageHome("PageHome");
-
     pageHome.run();
 
     return 0;
