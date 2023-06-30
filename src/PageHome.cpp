@@ -80,7 +80,7 @@ void PageHome::init(){
 
     std::list<ObjetoDeJogo *> lista;
 
-    Sprite selector("src/imgs/selector.txt");
+    Sprite selector("src/imgs/options_selector.txt");
     Sprite options_start("src/imgs/options_start.txt");
     Sprite options_help("src/imgs/options_help.txt");
     Sprite options_about("src/imgs/options_about.txt");
