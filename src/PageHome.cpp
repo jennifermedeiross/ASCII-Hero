@@ -3,8 +3,11 @@
 void PageHome::run(){
     Sprite screen("src/imgs/screen.txt");
     SpriteAnimado asciihero("src/imgs/asciihero.txt");
-    Sound somMenu("src/musics/somMenuu.mp3");
-    Sound colidiu("src/musics/colidiuu.mp3");
+    Sprite mHelp("src/imgs/mensagemHelp.txt");
+    Sprite mAbout("src/imgs/mensagemAbout.txt");
+    
+    Sound somMenu("src/musics/somMenu.mp3");
+    Sound colidiu("src/musics/colidiu.mp3");
     Sound selecionou("src/musics/selecionou.mp3");
 
     init();
@@ -41,18 +44,25 @@ void PageHome::run(){
 
             else if (pSelector->colideCom(*pHelp)){
                 selecionou.play();
+                mHelp.draw(screen, 43, 5);
+                system("clear");
+                show(&screen);
                 std::cin.ignore();
                 selecionou.play();
             }
 
             else if(pSelector->colideCom(*pAbout)){
                 selecionou.play();
+                mAbout.draw(screen, 43, 18);
+                system("clear");
+                show(&screen);
                 std::cin.ignore();
                 selecionou.play();
             }
 
             else if(pSelector->colideCom(*pExit)){
                 selecionou.play();
+                break;
             }
         }
     }
