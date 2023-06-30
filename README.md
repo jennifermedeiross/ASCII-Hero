@@ -4,6 +4,8 @@ Versão em ASCII Art do jogo GuitarHero utilizando engine criada na disciplina d
 <hr/>
 
 <div align="center">
+
+<hr/>
   
 ### Recursos:
 Classes | 
