@@ -5,7 +5,6 @@ Versão em ASCII Art do jogo GuitarHero utilizando engine criada na disciplina d
 
 <div align="center">
 
-<hr/>
   
 ### Recursos:
 Classes | 
@@ -16,6 +15,8 @@ E/S padrão e em arquivos de texto |
 STL
 
 </div>
+
+<hr/>
 
 ## Requisitos
 
