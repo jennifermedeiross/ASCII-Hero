@@ -1,5 +1,19 @@
 # ASCII-Hero
-Versão em ASCII Art do jogo GuitarHero utilizando engine criada na disciplina de Programção Orientada a Objetos.
+Versão em ASCII Art do jogo GuitarHero utilizando a engine ASCII_ENGINE desenvolvida na disciplina de Programação Orientada a Objetos. A engine segue o seguinte modelo:
+
+GameBase - Classe abstrata topo de toda hierarquia
+
+SpriteBase - É a classe abstrata topo da hierarquia de classes sprite, lida com a leitura de arquivos e conversão em vetores de strings
+Sprite - Lida com os sprites estáticos
+SpriteAnimado - Lida com os sprites animados
+
+Fase - É a classe abstrata toda da hierarquia de classes fase
+
+ObjetoDeJogo - É a classe topo da hierarquia de classes objeto
+
+Sound - Classe que manipula arquivos de som utilizando mpg321 (Desenvolvida pelo professor Victor Oliveira)
+
+Teclado - Classe que manipula terminal para entrada de caracteres do usuário
 
 <hr/>
 
