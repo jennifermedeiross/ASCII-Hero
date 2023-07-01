@@ -3,8 +3,8 @@
 void PageHome::run(){
     Sprite screen("src/imgs/screen.txt");
     SpriteAnimado asciihero("src/imgs/asciihero.txt");
-    Sprite mHelp("src/imgs/mensagemHelp.txt");
-    Sprite mAbout("src/imgs/mensagemAbout.txt");
+    Sprite mHelp("src/imgs/menu/mensagemHelp.txt");
+    Sprite mAbout("src/imgs/menu/mensagemAbout.txt");
     
     Sound somMenu("src/musics/somMenu.mp3");
     Sound colidiu("src/musics/colidiu.mp3");
@@ -80,11 +80,11 @@ void PageHome::init(){
 
     std::list<ObjetoDeJogo *> lista;
 
-    Sprite selector("src/imgs/options_selector.txt");
-    Sprite options_start("src/imgs/options_start.txt");
-    Sprite options_help("src/imgs/options_help.txt");
-    Sprite options_about("src/imgs/options_about.txt");
-    Sprite options_exit("src/imgs/options_exit.txt");
+    Sprite selector("src/imgs/menu/options_selector.txt");
+    Sprite options_start("src/imgs/menu/options_start.txt");
+    Sprite options_help("src/imgs/menu/options_help.txt");
+    Sprite options_about("src/imgs/menu/options_about.txt");
+    Sprite options_exit("src/imgs/menu/options_exit.txt");
 
     pStart = new ObjetoDeJogo(options_start, 10, 45);
     pHelp = new ObjetoDeJogo(options_help, 58, 45);
