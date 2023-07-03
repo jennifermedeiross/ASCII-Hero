@@ -4,10 +4,11 @@
 #include "Selector.hpp"
 #include "PageHome.hpp"
 #include "ChooseMusic.hpp"
+#include "Game.hpp"
 
 int main() {
-    ChooseMusic pageHome("PageHome");
-    pageHome.run();
+    Game game;
+    game.run();
 
     return 0;
 }
