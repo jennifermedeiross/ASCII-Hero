@@ -17,7 +17,7 @@ void SpriteBase::vetorizarArquivo() {
             this->sprite.push_back(line);
         }
         arquivo.close();
-    }
+    } else {std::cout << "\nArquivo " << getCaminho() << " não encontrado.\n";}
 }
 
 std::ostream& operator<<(std::ostream& out, const SpriteBase& spriteBase) {
