@@ -6,7 +6,7 @@ void PageHome::run(){
     Sprite mHelp("src/imgs/pageHome/mensagemHelp.txt");
     Sprite mAbout("src/imgs/pageHome/mensagemAbout.txt");
     
-    Sound somMenu("src/musics/somMenu.mp3");
+    Sound somMenu("src/musics/iLoveRockNRoll.mp3");
     Sound colidiu("src/musics/colidiu.mp3");
     Sound selecionou("src/musics/selecionou.mp3");
 
@@ -23,6 +23,8 @@ void PageHome::run(){
 
 
         if(entrada == 'q' || entrada == 'Q'){
+            setState("End");
+            somMenu.stop();
             break;
         }
         else if (entrada == 'd' || entrada == 'D'){
@@ -64,6 +66,8 @@ void PageHome::run(){
 
             else if(pSelector->colideCom(*pExit)){
                 selecionou.play();
+                somMenu.stop();
+                setState("End");
                 break;
             }
         }
@@ -74,8 +78,10 @@ void PageHome::init(){
     Sprite screen("src/imgs/screen.txt");
     Sprite guitarhome("src/imgs/guitarhome.txt");
     Sprite sky("src/imgs/sky.txt");
+    Sprite infoMenu("src/imgs/pageHome/infoMenu.txt");
 
     sky.draw(screen, 1, 1);
+    infoMenu.draw(screen, 161, 1);
     guitarhome.draw(screen, 58, 1);
 
     setBackground(&screen);
