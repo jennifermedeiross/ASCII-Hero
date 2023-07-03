@@ -24,7 +24,7 @@ void Sprite::draw(SpriteBase &base, unsigned colunaDesejada, unsigned linhaDesej
             if (coluna < larguraDestino &&
                 linha < alturaDestino) {
                 char pixel = desenhoOrigem[i][j];
-                if (pixel != 'x')
+                if (pixel != '%')
                 {
                     desenhoDestino[linha][coluna] = pixel;
                 }

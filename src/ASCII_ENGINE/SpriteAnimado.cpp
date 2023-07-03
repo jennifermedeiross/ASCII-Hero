@@ -56,7 +56,7 @@ void SpriteAnimado::draw(SpriteBase &base, unsigned colunaDesejada, unsigned lin
             if (coluna < larguraDestino &&
                 linha < alturaDestino) {
                 char pixel = desenhoOrigem[i][j];
-                if (pixel != 'x')
+                if (pixel != '%')
                 {
                     desenhoDestino[linha][coluna] = pixel;
                 }
