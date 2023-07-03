@@ -9,6 +9,9 @@ class ChooseMusic : public Fase{
     public:
         ChooseMusic(std::string nome) : Fase(nome) {}
         virtual ~ChooseMusic(){}
+
+        virtual void run();
+        virtual void init();
 };
 
 
