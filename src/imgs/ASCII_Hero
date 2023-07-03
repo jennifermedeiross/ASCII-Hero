@@ -1,3 +1,8 @@
+Lógica para game:
+
+colocar nota como objeto e a cada update setar a linha pra ir descendo
+usar o draw e show para mudar as teclas
+
    _____    __________________ .___.___ 
   /  _  \  /   _____/\_   ___ \|   |   |
  /  /_\  \ \_____  \ /    \  \/|   |   |
