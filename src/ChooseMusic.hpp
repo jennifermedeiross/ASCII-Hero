@@ -5,7 +5,9 @@
 
 class ChooseMusic : public Fase{
     private:
-        /* data */
+        std::vector<Sound> musicas;
+        ObjetoDeJogo *pMusica;
+
     public:
         ChooseMusic(std::string nome) : Fase(nome) {}
         virtual ~ChooseMusic(){}

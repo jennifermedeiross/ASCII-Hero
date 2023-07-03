@@ -3,15 +3,12 @@
 void ChooseMusic::run(){
     Sprite screen("src/imgs/screen.txt");
     SpriteAnimado asciihero("src/imgs/asciihero.txt");
-    Sprite mHelp("src/imgs/menu/mensagemHelp.txt");
-    Sprite mAbout("src/imgs/menu/mensagemAbout.txt");
     
-    Sound somMenu("src/musics/somMenu.mp3");
-    Sound colidiu("src/musics/colidiu.mp3");
     Sound selecionou("src/musics/selecionou.mp3");
 
     init();
-    somMenu.playloop();
+
+    int indexMusic = 0;
 
     while(true){
         system("clear");
@@ -19,19 +16,48 @@ void ChooseMusic::run(){
         asciihero.draw(screen, 69, 7);
         asciihero.update();
         show(&screen);
+
+        musicas[indexMusic].play();
+        
         char entrada = getTeclado().getch();
 
         if(entrada == 'q' || entrada == 'Q'){
+            setState("PageHome");
+            musicas[indexMusic].stop();
             break;
         }
+
+        else if(entrada == 'S' || entrada == 's'){
+            musicas[indexMusic].stop();
+            indexMusic < 2 ? indexMusic++ : indexMusic = 0;
+            update();
+        }
+
     }
 }
 
 void ChooseMusic::init(){
     Sprite screen("src/imgs/screen.txt");
     Sprite sky("src/imgs/sky.txt");
+    Sprite infoMusic("src/imgs/chooseMusic/infoMusic.txt");
 
     sky.draw(screen, 1, 1);
+    infoMusic.draw(screen, 161, 1);
 
     setBackground(&screen);
+
+    std::list<ObjetoDeJogo *> lista;
+
+    pMusica = new ObjetoDeJogo(SpriteAnimado("src/imgs/chooseMusic/musics.txt"), 52, 35);
+    lista.push_back(pMusica);
+
+    setListaObjetos(lista);
+
+    Sound music1("src/musics/iLoveRockNRoll.mp3");
+    Sound music2("src/musics/ironMan.mp3");
+    Sound music3("src/musics/sweetChildOMine.mp3");
+    musicas.push_back(music1);
+    musicas.push_back(music2);
+    musicas.push_back(music3);
+    
 }
