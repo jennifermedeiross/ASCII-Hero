@@ -39,7 +39,9 @@ void PageHome::run(){
         else if(entrada == 'x' || entrada == 'X'){
 
             if(pSelector->colideCom(*pStart)){
+                setState("ChooseMusic");
                 selecionou.play();
+                break;
             }
 
             else if (pSelector->colideCom(*pHelp)){
