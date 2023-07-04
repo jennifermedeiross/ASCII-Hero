@@ -18,6 +18,7 @@ void ChooseMusic::run(){
         show(&screen);
 
         musicas[indexMusic].play();
+        std::cout << faseState() << std::endl;
         
         char entrada = getTeclado().getch();
 
@@ -28,9 +29,16 @@ void ChooseMusic::run(){
         }
 
         else if(entrada == 'S' || entrada == 's'){
+            selecionou.play();
             musicas[indexMusic].stop();
             indexMusic < 2 ? indexMusic++ : indexMusic = 0;
             update();
+        }
+
+        else if(entrada == 'x' || entrada == 'X'){
+            setState("Fase" + std::to_string(indexMusic + 1));
+            musicas[indexMusic].stop();
+            break;
         }
 
     }
