@@ -40,9 +40,11 @@ void ChooseMusic::init(){
     Sprite screen("src/imgs/screen.txt");
     Sprite sky("src/imgs/sky.txt");
     Sprite infoMusic("src/imgs/chooseMusic/infoMusic.txt");
+    Sprite selector("src/imgs/chooseMusic/selector.txt"); 
 
     sky.draw(screen, 1, 1);
     infoMusic.draw(screen, 161, 1);
+    selector.draw(screen, 39, 39);
 
     setBackground(&screen);
 
@@ -53,11 +55,10 @@ void ChooseMusic::init(){
 
     setListaObjetos(lista);
 
-    Sound music1("src/musics/iLoveRockNRoll.mp3");
-    Sound music2("src/musics/ironMan.mp3");
-    Sound music3("src/musics/sweetChildOMine.mp3");
+    Sound music1("src/musics/sweetChildOMine.mp3");
+    Sound music2("src/musics/iLoveRockNRoll.mp3");
+    Sound music3("src/musics/ironMan.mp3");
     musicas.push_back(music1);
     musicas.push_back(music2);
     musicas.push_back(music3);
-    
 }
